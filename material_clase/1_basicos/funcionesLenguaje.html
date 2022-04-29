@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //pasar de mayusculas a minusculas y viceversa
+
+        //javascript es caseSensitive
+        // 'Pepe' !== 'pepe'
+
+        var variable1 = "PePe";
+        var variable2 = 'maria';
+
+        variable1 = variable1.toLowerCase() //minisculas
+        variable2 = variable2.toUpperCase() //MAYUSCULAS
+
+        console.log(variable1)
+        console.log(variable2)
+
+        //funciones de parseo - funciones que permiten cambiar de tipo de dato.
+
+        var numero = 3.45;
+        var entero = parseInt(numero) // 3
+        console.log(entero)
+
+        var numero2 = 3;
+        var racional = parseFloat(numero2) //3.00
+        console.log(racional)
+
+        var edad = prompt('Dime tu edad');
+        //ojo prompt me devuelve como todos los inputs de type text me devuelve un texto.
+
+        //como lo convierto a numero?
+        edad = parseInt(edad);
+        console.log(typeof edad);
+
+        //Number() convierte una cadena en valor numerico
+        var precio = Number(prompt('Dime un precio'));
+        console.log(precio);
+
+        //pasar numerico a string
+
+        var numero = 23;
+        var numeroString = 23 + "";
+        var numeroString2 = String(numero);
+        console.log(typeof numeroString)
+        console.log(typeof numeroString2);
+
+    </script>
+</body>
+
+</html>
