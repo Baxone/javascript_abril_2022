@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion que recibe parametros</title>
+</head>
+
+<body>
+
+    <script>
+
+        saludar('Barbara')
+        //existe diferentes tipos de parametros, obligatorios y optativos
+
+        //solo una premisa para diferenciarlos, siempre los obligatorios primero y los optativos despues.
+
+        var nombre = "Juan Antonio"
+
+        function saludar(pNombre, pApellido = "Perez") {
+            document.write(`<h1>Hola ${pNombre} ${pApellido}</h1>`)
+        }
+
+
+        saludar('Luz')
+        saludar(nombre, 'Gutierrez')
+        saludar()
+
+
+        //housting hace un primera lectura de todo mi codigo localizando las declaracion para poder llamar a una funcion antes de declarar. Solo es propio de Javascript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones que devuelven parametros</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function sumar(pNumero1, pNumero2) {
+            let suma = pNumero1 + pNumero2;
+            return suma;
+        }
+
+        function pintarResultado(pResultado) {
+            document.write(`El resultado es ${pResultado}`);
+        }
+
+        let numero1 = parseInt(prompt('Dime un numero'))
+        let numero2 = parseInt(prompt('Dime otro numero'))
+        let misumita = sumar(numero1, numero2)
+        pintarResultado(misumita)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

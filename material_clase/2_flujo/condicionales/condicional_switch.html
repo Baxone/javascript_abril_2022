@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH</title>
+</head>
+
+<body>
+
+    <script>
+        //traductor, le pasas una palabra y la devuelve traducida
+        var color = prompt('Dime un color es castellano');
+        color = color.toLowerCase();
+
+        switch (color) {
+
+            case 'bermellon':
+            case 'rojo':
+                alert('red');
+                break;
+
+            case 'ceruleo':
+            case 'azul':
+                alert('blue');
+                break;
+
+            case 'amarillo':
+                alert('yellow');
+                break;
+
+            default:
+                //secuencia de escape.
+                alert('la palabra a traducir no existe')
+                break;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

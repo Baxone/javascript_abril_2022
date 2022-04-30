@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+
+    <script>
+
+        //funcion flecha es lo mismo que una funcion anonima pero abreviando el texto. 
+
+        // 1 paso: se sustituye la palabra function por una flecha => por detras de los parentesis de los parametros.
+
+        // 2 paso: si la funcion solo recibe un parametro, ni cero ni mas de uno, se pueden quitar los parentesis
+
+        // 3 paso: si entre las llaves de la funcion solo realizo una accion puedo quitar las llaves y si esta acciones es un return tb puedo quitar el return
+
+        /*
+        const multiplicar = function (pNumero1, pNumero2) {
+            let resultado = pNumero1 * pNumero2;
+            console.log(resultado);
+        }
+        multiplicar(3, 4);
+       */
+
+
+        const multiplicar = (pNumero1, pNumero2) => pNumero1 * pNumero2;
+
+        let multiplicacion = multiplicar(3, 4);
+        console.log(multiplicacion)
+
+    </script>
+
+</body>
+
+</html>

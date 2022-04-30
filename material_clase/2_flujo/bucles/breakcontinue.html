@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break y continue</title>
+</head>
+
+<body>
+    <script>
+
+        //break es para totalmente el bucle, sin terminar
+
+        var numeroAleatorio = Math.random() * 51;
+        var inicial = 0;
+        console.log(numeroAleatorio);
+
+        /* while (inicial <= numeroAleatorio) {
+            if (inicial >= 8) {
+                break;
+            }
+            console.log(inicial);
+            inicial++
+        }*/
+
+
+        //continue: se salta una iteracion, se salta la condicion y luego sigue.
+
+        while (inicial <= numeroAleatorio) {
+            if (inicial % 3 === 0) {
+                inicial++;
+                continue;
+            }
+            console.log(inicial);
+            inicial++;
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

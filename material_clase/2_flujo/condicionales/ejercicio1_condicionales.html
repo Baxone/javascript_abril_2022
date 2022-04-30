@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //el portero de discoteca. vamos a preguntar por pantalla la edad de la persona y le dejaremos pasar dependiendo de si cumple o no con los criterios de entrada.
+
+        var edad = parseInt(prompt('Dime tu edad'));
+        const EDAD_MAX = 18;
+
+        //opcion 1 Noob
+        /* if (edad >= EDAD_MAX) {
+            alert('Bienvenido')
+        } else {
+            alert('Un vasito de leche y la cama');
+        } */
+
+        //opcion 2 Medium
+
+        /*
+        if (edad >= 0 && edad < EDAD_MAX) {
+            alert('no puedes pasar')
+        } else if (edad >= EDAD_MAX && edad <= 100) {
+            alert('bienvenido')
+        } else {
+            alert('tu edad no es valida')
+        }
+        */
+
+        //opcion 3 Pro, lo primero que quiero hacer es comprobar si es un numero
+
+        //isNaN me devuelve true o false si me valor parseado no es un numero.
+        //console.log(isNaN(edad))
+
+
+        if (!isNaN(edad) && edad >= 0 && edad <= 100) {
+            //puedo hacer la comparacion, tengo un numero
+
+            var mensaje = (edad < EDAD_MAX) ? 'hasta luego' : 'bienvenido';
+
+            alert(mensaje);
+        } else {
+            alert('el dato introducido no es valido')
+        }
+
+
+    </script>
+
+</body>
+
+</html>

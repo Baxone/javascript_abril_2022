@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ambito funcional</title>
+</head>
+
+<body>
+
+    <script>
+
+        //solo tenemos dos ambitos, global y local
+
+        //global es aquel que me permite crear una variable de cualquier tipo (let o var) y que es accesible desde cualquier parte de mi codigo.
+
+
+        //local es una variable que se crea dentro del ambito de una funcion {}. Cualquier variable creada dentro de una funcion no puede ser usada fuera.
+
+        var nombre = "Juan Antonio" //global
+        var edad = 29 //global
+
+        function saludar() {
+            var apellido = 'Perez' //local
+            console.log(apellido, edad, 'dentro')
+        }
+
+        if (edad > 100) {
+            var ciudad = "Madrid"; //global
+        }
+
+        saludar();
+
+        console.log(edad, ciudad)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

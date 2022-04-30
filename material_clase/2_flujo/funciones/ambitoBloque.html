@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de bloque</title>
+</head>
+
+<body>
+    <script>
+
+        //ambito de bloque ya no es exclusivo de las funciones. Se presenta en cualquier extrutura de flujo, cualquie cosa que tenga {}
+
+        //const y let tiene el mismo ambito de bloque
+
+        var nombre = "Juan" //global
+        let apellido = 'Perez' //global
+        const pi = 3.141517; //global
+        let numero = 0;
+        let edadLet = 34;
+
+        if (nombre === 'Maria') {
+            var edadVar = 23; //global
+            let edadLet = 45; //local
+            numero = 100 //global
+            const edadConst = 100; //local
+        }
+
+
+        console.log(edadLet, edadConst)
+
+        //bucles
+
+        for (let i = 0; i < 10; i++) {
+
+        }
+
+        for (let i = 0; i < 10; i++) {
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

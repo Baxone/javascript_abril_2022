@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+
+<body>
+
+    <script>
+
+        // funciona igual que el while pero me asegura al menos una entrada en el bucle.
+
+
+        const USER = 'juan';
+        const PASS = '12345';
+
+        do {
+            var user = prompt('Dame el usuario')
+            var pass = prompt('Dame el password');
+
+        } while (user !== USER || pass !== PASS)
+
+
+        document.write('<h1>Bienvenido</h1>');
+
+    </script>
+
+</body>
+
+</html>
