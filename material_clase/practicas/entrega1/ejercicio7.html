@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let comida = prompt('Que quieres comer, pescado o carne');
+        comida = comida.toLowerCase();
+
+        let postre = prompt('Quieres postres? Si o No')
+        postre = postre.toLowerCase();
+
+        function calcularComanda(pComida, pPostre) {
+            let propina = 0.06;
+            let comanda = 0;
+
+            if (pComida === 'pescado') {
+                comanda = 15.45;
+            } else if (pComida === 'carne') {
+                comanda = 23;
+            } else {
+                return false;
+            }
+
+            if (pPostre === 'si') {
+                comanda += 3;
+            }
+
+            return (comanda * propina) + comanda;
+        }
+
+        let cuenta = calcularComanda(comida, postre, 2).toFixed(2);
+
+        let mensaje = (cuenta === false) ? 'lo que has elegido no esta en carta' : `tu cuenta es ${cuenta}`;
+
+        alert(mensaje);
+    </script>
+
+</body>
+
+</html>

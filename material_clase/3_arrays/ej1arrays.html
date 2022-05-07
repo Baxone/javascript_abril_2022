@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rojo {
+            color: tomato
+        }
+
+
+        .verde {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        //tenemos un listado de numeros, quiero pintar en pantalla html los numeros en un listado no numerado. Si el numero es negativo me lo va a pintar de rojo y es positivo me la va pintar de verde.
+
+        const numeros = new Array(1, 23, -3, 45, -14, -5, -78, 3, 4, 89, 100);
+        const otrosnumeros = new Array(1, 2, 3, 4, 5, 6, 7);
+
+        function pintarLista(pListaNumeros) {
+            let contenido = '<ul>';
+
+            for (let i = 0; i < pListaNumeros.length; i++) {
+                let clase = (pListaNumeros[i] >= 0) ? 'verde' : 'rojo';
+                contenido += `<li class="${clase}">${pListaNnumerosumeros[i]}</li>`
+            }
+
+            contenido += '</ul>';
+            document.write(contenido);
+        }
+
+        pintarLista(numeros);
+
+        pintarLista(otrosnumeros);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

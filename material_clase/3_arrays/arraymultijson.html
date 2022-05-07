@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de JSON</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Un array de JSON es lo mas parecido en javascript a una BBDD pero sin persistencia. Ya que es un listado de datos o registro con diferentes valores.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 40,
+                notamedia: 10
+            },
+            {
+                nombre: 'Lucia',
+                edad: 35,
+                notamedia: 7
+            },
+            {
+                nombre: 'Pepe',
+                edad: 55,
+                notamedia: 3
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: 27,
+                notamedia: 4.5
+            },
+
+        )
+
+        //sacar por consola el nombre y la nota de rodrigo
+
+        console.log(listaAlumnos[3].nombre)
+        console.log(listaAlumnos[3]['notamedia'])
+
+
+        let contenido = '<ul>';
+
+        for (let alumno of listaAlumnos) {
+            if (alumno.notamedia < 5) {
+                contenido += `<li>${alumno.nombre}: ${alumno.notamedia}</li>`
+            }
+
+        }
+
+        contenido += '</ul>';
+
+        document.write(contenido);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - array asociativo</title>
+</head>
+
+<body>
+
+    <script>
+        //JSON JavaScript Object Notation
+
+        // es lo que conocemos en otros lenguajes de programacion como array asociativo. Aqui eliminamos el concepto de posicion para manejar el concepto de clave: valor;
+
+        //elimamos [] y los sustituimos por {}
+
+        //object literal,  las claves pueden estar con o sin comillas.
+
+        const producto = {
+            nombre: 'leche',
+            precio: 2,
+            tipo: 'desnatada',
+            capacidad: 1.5,
+            stock: true
+        }
+
+        console.log(producto);
+
+        //nomenclatura de corchete, que usabamos en arrays
+
+        console.log(producto['nombre'])
+
+        //nomenclatura de punto. Más habitual
+        console.log(producto.precio)
+
+
+        let clave = 'stock';
+
+        console.log(producto[clave])
+
+        //como recorremos un json, que no tiene posicion.
+
+        //para recorrer json usamos un tipo de bucle for in
+
+        for (let key in producto) {
+            document.write(`<p>${key} : ${producto[key]}</p>`)
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

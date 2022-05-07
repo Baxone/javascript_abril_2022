@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.zoo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zoo article{
+    width: calc(33.333% - 20px);
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.zoo article ul{
+    list-style: none;
+}
+
+.zoo .peligroso{
+    border-color: red;
+}
+
+.zoo .cuidadin{
+    border-color: orange;
+}
+
+.zoo .ojito{
+    border-color: yellow;
+}
+
+.zoo .tranquilito{
+    border-color: green;
+}
+
+.zoo .docil{
+    border-color: lightblue;
+}

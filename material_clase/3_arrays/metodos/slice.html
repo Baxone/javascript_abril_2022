@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //SLICE me permite recoger uno o mas items de un array en un posicion especifica. NO MODIFICA EL ARRAY PRINCIPAL - COPIA
+
+        //primer parametro es la posicion desde la que partimos, segundo parametro es la posicion hasta la que llegamos sin incluirla.
+
+        const listaAnimales = new Array('Leon', 'Perro', 'Gato', 'Periquito', 'Aguila', 'Cocodrilo', 'Hampster');
+
+        const listaAnimalesDomesticos1 = listaAnimales.slice(1, 4);
+        // const listaAnimalesDomesticos2 = listaAnimales.slice(6,7);
+        const listaAnimalesDomesticos2 = listaAnimales.slice(-1);
+
+        //concat() justa dos a mas arrays
+        const listaAnimalesDomesticos = listaAnimalesDomesticos1.concat(listaAnimalesDomesticos2);
+
+
+        console.log(listaAnimalesDomesticos);
+
+
+        console.log(listaAnimales.slice(-3, -1))
+
+    </script>
+
+</body>
+
+</html>

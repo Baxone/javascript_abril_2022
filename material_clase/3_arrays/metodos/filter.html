@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //filter me permite filtrar un array en funcion de un callback que interponga una condicion.
+
+        const numeros = new Array(1, 2, 3, 4, 5, 6, 7, 8, 23, 54);
+
+        //sacar un array de pares.
+
+        const pares = numeros.filter(function (numero) {
+            return numero % 2 === 0;
+        })
+        console.log(pares);
+
+
+        const impares = numeros.filter(numero => numero % 2 !== 0)
+
+
+
+
+
+
+        const alumnos = new Array(
+            {
+                nombre: 'Juan',
+                nota: 3
+            },
+            {
+                nombre: 'Pepe',
+                nota: 10
+            }
+        )
+
+        const suspensos = alumnos.filter(function (alumno) {
+            return alumno.nota < 5
+        })
+
+
+        const aprobados = alumnos.filter(alumno => alumno.nota >= 5);
+
+
+    </script>
+
+</body>
+
+</html>

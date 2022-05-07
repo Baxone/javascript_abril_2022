@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //SPLICE elimina elementos en cualquier posicion del array, recalculando los indices de posicion del array. Devuelve el elementos borrados.
+
+        //recibe dos parametros, el primero es la posicion desde la que parto y el segundo es la cantidad de elementos que borro desde esa posicion.
+
+        const listaAnimales = new Array('Leon', 'Perro', 'Gato', 'Periquito');
+
+        const elementosBorrados = listaAnimales.splice(1, 2)
+
+        console.log(listaAnimales)
+        console.log(elementosBorrados);
+
+    </script>
+</body>
+
+</html>

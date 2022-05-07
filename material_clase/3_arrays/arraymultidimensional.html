@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const aves = new Array('Aguila', 'Cuervo', 'Buho', 'Colibri');
+
+        const felinos = new Array('León', 'Tigre', 'Pantera');
+
+        const anfibios = new Array('Cocodrilo', 'Rana', 'Hipopotamo');
+
+
+        const zoo = new Array(aves, anfibios, felinos);
+
+        console.log(zoo);
+
+        //un animal del array
+
+        console.log(zoo[1][1]) //rana
+        console.log(zoo[2][2]) //pantera
+
+
+        //recorremos un array multidmensional
+        document.write('<h1>con bucle for i </h1>')
+        for (let i = 0; i < zoo.length; i++) {
+            for (let j = 0; j < zoo[i].length; j++) {
+                document.write(`<p>${zoo[i][j]}</p>`)
+            }
+        }
+
+        document.write('<hr>');
+        //bucle for of
+        document.write('<h1>con bucle for of </h1>')
+
+        let i = 0;
+        for (let especie of zoo) {
+            for (let animal of especie) {
+                if (i === 1) {
+                    document.write(`<p>${animal}</p>`)
+                    break;
+                }
+                i++;
+            }
+            i = 0;
+        }
+        alert(i); //numero total de animales del zoo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

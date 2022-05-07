@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //una funcion de callback tambien puede recibir como parametro la definicion de una funcion
+
+        function calcular(funcion) {
+            let numero = 2;
+            let numero2 = 3;
+            funcion(numero, numero2)
+        }
+
+        calcular(function (pNumero1, pNumero2) {
+            console.log(pNumero1 + pNumero2)
+        })
+
+        calcular((pNumero1, pNumero2) => console.log(pNumero1 * pNumero2))
+
+        let resta = function (pNumero1, pNumero2) {
+            console.log(pNumero1 - pNumero2)
+        }
+
+        calcular(resta);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

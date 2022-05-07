@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //array es una lista de elementos, casi siempre son del mismo tipo.
+
+        //opcion funcional
+        const listaNumeros = []; //array vacio
+        const listaAlumnos = ['Marcos', 'David', 'Lucia', 'Alba', 'Luis'];
+
+        //opcion POO
+        const listaAlimentos = new Array() //array vacio
+        const listaAnimales = new Array('Leon', 'Perro', 'Gato');
+
+        //como muestro un valor del array, usando la posicion
+        // un array tiene n de longitud y se numero 0 a n-1
+
+        console.log(listaAnimales[1])
+
+
+        //puedes añadir elementos a traves de la posicion
+
+        // listaAnimales[4] = 'Cocodrilo';
+        listaAnimales[listaAnimales.length] = 'Cocodrilo'
+        listaAnimales[listaAnimales.length] = 'Camello';
+
+        console.log(listaAnimales);
+
+        //pintar una lista no numerada de html con los alumnos que tengo.
+
+        let contenidoHtml = '<ul>';
+
+        for (let i = 0; i < listaAlumnos.length; i++) {
+            contenidoHtml += `<li>${listaAlumnos[i]}</li>`
+        }
+
+        contenidoHtml += '</ul>';
+
+        document.write(contenidoHtml);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

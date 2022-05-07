@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let numero = 0;
+        let cadena = "";
+        do {
+            numero = Number(prompt('Dime un numero'))
+            if (numero !== 0) {
+                cadena += numero + ',';
+            }
+        } while (numero !== 0)
+
+        //un cadena de caracteres tiene longitud que se numero 0 a n-1 siendo la n la longitud del cadena
+        //console.log(cadena.length)
+        document.write(cadena.substring(0, cadena.length - 1));
+
+
+
+    </script>
+</body>
+
+</html>
