@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find index o index</title>
+</head>
+
+<body>
+
+    <script>
+
+        //busca un elemento dentro de un array, si lo encuentra me devuelve su posicion y si no me devuelve -1
+
+        const listaAnimales = new Array('leon', 'perro', 'gato', 'periquito')
+
+        let busqueda = 'periquito'
+
+        let posicion = listaAnimales.indexOf(busqueda);
+
+        console.log(posicion); //3
+
+        console.log(listaAnimales[posicion])
+
+
+        //findIndex ES7 para arrays multidimensionales, funciona exactamente igual que indexof
+
+        let alumnos = new Array(
+            {
+                nombre: 'Juan',
+                nota: 3
+            },
+            {
+                nombre: 'Pepe',
+                nota: 10
+            },
+            {
+                nombre: 'Ramon',
+                nota: 6
+            },
+        )
+
+        let posicionMulti = alumnos.findIndex(alumno => alumno.nota < 5)
+
+        console.log(posicionMulti)
+
+
+        //borrar del listado de alumno un alumno por su nombre.
+
+        //quiero borrar a ramon
+        console.log('--------------------');
+        console.log(alumnos)
+
+        function borrarAlumno(pLista, pNombre) {
+
+            /* opcion 1 
+            //buscar la posicion del alumno a borrar
+            let posicion = pLista.findIndex(alumno => alumno.nombre === pNombre);
+
+            //borrar esa posicion resultante.
+            pLista.splice(posicion, 1);
+
+            console.log(pLista);
+            */
+
+            /* opcion 2*/
+            return pLista.filter(alumno => alumno.nombre !== pNombre);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

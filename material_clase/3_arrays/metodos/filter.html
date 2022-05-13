@@ -41,14 +41,22 @@
                 nombre: 'Pepe',
                 nota: 10
             }
+            ,
+            {
+                nombre: 'ramon',
+                nota: 6
+            }
         )
 
         const suspensos = alumnos.filter(function (alumno) {
             return alumno.nota < 5
         })
 
+        console.log(suspensos);
 
         const aprobados = alumnos.filter(alumno => alumno.nota >= 5);
+
+        console.log(aprobados);
 
 
     </script>

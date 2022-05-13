@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //includes es un funcion que me permite buscar una cadena de caracteres en un array o en otra cadena las larga. Me devuelve tru o false si esta incluida mi cadena de caracteres.
+
+
+        let frase = 'En un lugar de la mancha';
+        let palabra = 'mancha';
+
+        let busqueda = frase.includes(palabra);
+        console.log(busqueda);
+
+        //array simple
+
+        let listaCosas = new Array('casa', 'perro', 'arbol');
+        let palabra2 = 'gato';
+
+        let busqueda2 = listaCosas.includes(palabra2);
+
+        console.log(busqueda2)
+
+        // buscar un elemento y sacar sus datos.
+
+        const listaProductos = new Array(
+            {
+                nombre: 'leche',
+                precio: 3,
+                cantidad: 2
+            },
+            {
+                nombre: 'Pan',
+                precio: 0.30,
+                cantidad: 2
+            },
+            {
+                nombre: 'Pan bimbo',
+                precio: 3.40,
+                cantidad: 2
+            },
+            {
+                nombre: 'leche condensada',
+                precio: 6,
+                cantidad: 2
+            }
+
+        )
+
+        let terminoBusqueda = 'pan'
+
+
+        function buscarProducto(pLista, pTermino) {
+
+            let resultado = pLista.filter(producto => {
+                return producto.nombre.toLowerCase().includes(pTermino.toLowerCase())
+            })
+
+            console.log(resultado);
+        }
+
+
+        buscarProducto(listaProductos, terminoBusqueda)
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

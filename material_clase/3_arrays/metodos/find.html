@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Find busca el primer elemento del una array que cumpla determinada condicion y me devuelve ese elemento.
+
+
+        const alumnos = new Array(
+            {
+                nombre: 'Juan',
+                nota: 3
+            },
+            {
+                nombre: 'Pepe',
+                nota: 10
+            },
+            {
+                nombre: 'Ramon',
+                nota: 6
+            },
+        )
+
+        const primerAprobado = alumnos.find(alumno => {
+            return alumno.nota >= 5 && alumno.nombre.length > 4
+        })
+
+        console.log(primerAprobado)
+
+
+        const numeros = new Array(1, 2, 3, 4, 5, 6, 7);
+
+        const divisibleX3 = numeros.find(numero => numero % 3 === 0)
+
+        console.log(divisibleX3)
+
+
+
+    </script>
+</body>
+
+</html>

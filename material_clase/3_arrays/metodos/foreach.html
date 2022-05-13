@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const alumnos = new Array(
+            {
+                nombre: 'Juan',
+                nota: 3
+            },
+            {
+                nombre: 'Pepe',
+                nota: 10
+            },
+            {
+                nombre: 'Ramon',
+                nota: 6
+            },
+        )
+
+        alumnos.forEach(alumno => {
+            console.log(alumno.nombre + ': ' + alumno.nota)
+        })
+
+
+        function filtrarXNota(pLista, pNota) {
+            const listaFiltrada = pLista.filter(alumno => alumno.nota === pNota);
+
+            return listaFiltrada;
+        }
+
+
+        console.log(filtrarXNota(alumnos, 6))
+
+
+    </script>
+
+
+
+</body>
+
+</html>

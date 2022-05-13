@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Dom</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Lista de la Compra</h1>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <ul id="milista"></ul>
+        </section>
+    </main>
+    <footer>
+        Copyright @ 2022
+    </footer>
+
+
+    <script>
+
+        const listaCompra = new Array('Leche', 'Huevos', 'Pan', 'Cereales');
+
+        let ulMiLista = document.getElementById('milista');
+
+
+        function pintarLista(pLista, pDom) {
+            //pLista.forEach(item => pintarItem(item, pDom))
+            for (let item of pLista) {
+                pintarItem(item, pDom);
+            }
+        }
+
+
+        function pintarItem(pItem, pDom) {
+            pDom.innerHTML += `<li>${pItem}</li>`
+        }
+
+        pintarLista(listaCompra, ulMiLista)
+
+
+    </script>
+</body>
+
+</html>

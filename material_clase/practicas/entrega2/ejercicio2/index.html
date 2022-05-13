@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Ajedrez</title>
+    <style>
+        .fila {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  <div class="tablero">
+        <div class="fila">
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+        </div>
+        <div class="fila">
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+        </div>
+        <div class="fila">
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+        </div>
+        <div class="fila">
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+            <div style="background-color: black; width: 100px; height:100px"></div>
+            <div style="background-color: gray; width: 100px; height:100px"></div>
+        </div>
+    </div> -->
+
+    <script>
+
+        function pintarUnaCasilla(pAncho, pColor) {
+            const casilla = `<div style="background-color: ${pColor}; width: ${pAncho}px; height:${pAncho}px"></div>`
+
+            return casilla;
+        }
+
+
+
+        function pintarUnaFila(pColor1, pColor2, pAncho, pNumeroCasillas) {
+
+            let fila = '<div class="fila">'
+
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+
+                let color = (i % 2 != 0) ? pColor1 : pColor2
+                fila += pintarUnaCasilla(pAncho, color)
+            }
+
+            fila += '</div>'
+
+            return fila;
+        }
+
+        function pintarTablero(pCasillas, pAncho) {
+
+            let tablero = '<div class="tablero">'
+
+            for (let i = 1; i <= pCasillas; i++) {
+
+                let colorInicial = (i % 2 == 0) ? 'black' : 'grey';
+                let colorFinal = (i % 2 == 0) ? 'grey' : 'black';
+
+                tablero += pintarUnaFila(colorInicial, colorFinal, pAncho, pCasillas)
+
+            }
+
+            tablero += '</div>'
+            document.write(tablero)
+        }
+
+        let numeroCasillas = parseInt(prompt('Dime un numero de casillas'))
+        let anchoCasilla = parseInt(prompt('Dime un ancho en pixeles'))
+
+        pintarTablero(numeroCasillas, anchoCasilla);
+    </script>
+
+
+</body>
+
+</html>

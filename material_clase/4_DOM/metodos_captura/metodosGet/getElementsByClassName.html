@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name</title>
+</head>
+
+<body>
+
+    <ul class="comida">
+        <li>Pan</li>
+        <li>Leche</li>
+        <li>Huevos</li>
+    </ul>
+
+    <ul class="postres">
+        <li>Helado</li>
+        <li>Fruta</li>
+    </ul>
+
+
+    <script>
+        //modificar los lis de comida
+
+        let listascomida = document.getElementsByClassName('comida');
+        let comida = listascomida[0];
+
+
+        let liscomida = comida.getElementsByTagName('li');
+
+        for (let li of liscomida) {
+            li.innerText = 'cereales';
+        }
+
+    </script>
+</body>
+
+</html>
